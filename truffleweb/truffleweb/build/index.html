@@ -1,0 +1,169 @@
+
+
+<!<!DOCTYPE html>
+<<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weibo Ethereum</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" integrity="sha384-wvfXpqpZZVQGK6TAh5PV1GOfQNHSoD2xbE+QkPxCAFlNEevoEH3S10sibVcOQVnN" crossorigin="anonymous">
+    <style>
+      .margin-top-1 {
+        margin-top: 1em;
+      }
+    </style>
+  </head>
+  <body class="="container"">
+    <h2 style="text-align:center">Weibo Ethereum</h2>
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a data-toggle="tab" href="#sectionA" id="weibo_tab">
+          <i class="fa fa-user"></i>
+          Weibo Plantform
+        </a>
+      </li>
+      <li>
+        <a data-toggle="tab" href="#sectionB" id="weibo_tab">
+          <i class="fa fa-university"></i>
+          My Weibo
+        </a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div id="sectionA" class="tab-pane fade in active">
+        <div class="panel panel-primary margin-top-1">
+          <div class="panel-heading">
+            <h3 class="panel-title">Plantform Infomation</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td>Plantform Address</td>
+                  <td id="plantformAccount">0x5ab70c45d2a6148ef9ce4e67165aa5fb4567f3e</td>
+                </tr>
+                <tr>
+                  <td>Plantform Donation</td>
+                  <td id="plantformBalance">1 ether</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Registered Accounts</h3>
+          </div>
+          <div class="panel-body">
+            <div>
+              <table class="table table-striped">
+                <tr>
+                  <td>ID</td>
+                  <td>Name</td>
+                  <td>Address</td>
+                </tr>
+                <tbody id="weiboList">
+                  <tr><td>1</td><td>aaa</td><td>0x61558e3300fc55ccb6b8bbaaf5de2ed018c1365b</td></tr>
+                  <tr><td>2</td><td>bbb</td><td>0x6251af1C8970588f53278Fbb4eD213104E3D0611</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        </hr>
+        <div class="panel panel-primary text-center">
+          <div class="panel-heading">
+            <h3 class="panel-title">Register an account</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td style="text-align:left">weibo name</td>
+                  <td>
+                    <input type="text" class="form-control" id="weiboName" placeholder="weibo name">
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:left">weibo address</td>
+                  <td>
+                    <input type="text" class="form-control" id="weiboAddress" placeholder="weibo address">
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <button id="registerBtn" class="btn btn-primary">Register</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="sectionB">
+        <div class="panel panel-primary margin-top-1">
+          <div class="panel-heading">
+            <h3 class="panel-title">Account Infomation</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td>Nick Name</td>
+                  <td id="myName">aaa</td>
+                </tr>
+                <tr>
+                  <td>Account Address</td>
+                  <td id="myAccount">99.9407 ether</td>
+                </tr>
+                <tr>
+                  <td>Donation</td>
+                  <td id="myBalance">0 ether</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Publish Weibo</h3>
+          </div>
+          <div class="panel-body">
+            <div>
+              <textarea id="weiboContent" style="width:700px;height:200px;overflow:scroll;resize:none;"></textarea>
+              <button id="sendWeiboButton" class="btn btn-primary">Send</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">My Weibo</h3>
+          </div>
+          <div class="panel-body">
+            <div>
+              <div>
+                <table class="table table-striped">
+                  <tr>
+                    <td>ID</td>
+                    <td>Content</td>
+                    <td>Timestamp</td>
+                  </tr>
+                  <tbody id="weiboContentList">
+                    <tr><td>1</td><td>abcdefg</td><td>74527</td></tr>
+                    <tr><td>1</td><td>12345678</td><td>74689</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="javascripts/app.js"></script>
+</html>
